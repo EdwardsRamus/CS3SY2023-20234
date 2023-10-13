@@ -1,34 +1,34 @@
 body {
-				background-image: url("Edward.jpg");
-				background-color: #7EF391;
-				background-position: center;
-				background-repeat: no-repeat;
+	background-image: url("Edward.jpg");
+	background-color: #7EF391;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 h1 { 
         text-align: justify;
-				font-style: italic; 			
-				background-color: #F37894;
-				border: 2px dotted blue;
-				padding: 10px 15px;
-				width: 250px; 		
-				margin-bottom: 20px;
+	font-style: italic; 			
+	background-color: #F37894;
+	border: 2px dotted blue;
+	padding: 10px 15px;
+	width: 250px; 		
+	margin-bottom: 20px;
 }
 			
 p {
-			  text-align: justify;
-				font-style: italic; 
-				background-color: hsl(182, 98%, 55%);
-				border-style: solid dashed double dotted;
-				padding: 20px;
-				width: 500px; 
+        text-align: justify;
+	font-style: italic; 
+	background-color: hsl(182, 98%, 55%);
+	border-style: solid dashed double dotted;
+	padding: 20px;
+	width: 500px; 
 }
 
 span { 
         font-style: italic;
-				margin-left: 2px;
-				margin-right: 5px;
-				font-color: rgb(122, 255, 200);
-				font-weight: bold;
-				font-style: italic;
+	margin-left: 2px;
+	margin-right: 5px;
+	font-color: rgb(122, 255, 200);
+	font-weight: bold;
+	font-style: italic;
 }
