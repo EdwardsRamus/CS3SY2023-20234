@@ -3,12 +3,13 @@ body {
 	background-color: #7EF391;
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 h1 { 
         text-align: justify;
 	font-style: italic; 			
-	background-color: #F37894;
+	background-color: #9DF0FF;
 	border: 2px dotted blue;
 	padding: 10px 15px;
 	width: 250px; 		
