@@ -5,7 +5,7 @@
 }
 #header {
 	padding: 10px;
-	background-color: #D988B9;
+	background-color: #2f4f4f;
 }
 
 #logo {
@@ -17,8 +17,8 @@
 #header-name {
 	font-size: 50px;
 	margin:0;
-	color: #B0578D;
-	text-shadow: 1px 1px #FFE4D6;
+	color: #696969;
+	text-shadow: 1px 1px #dcdcdc;
 }
 .banner{
 	width: 100%;
