@@ -38,6 +38,7 @@
 .navbar ul li{
 	list-style: none;
 	display: inline-block;
-	margin: 0 20px;
-	padding-right: 250px;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
 }
