@@ -35,12 +35,9 @@
 	align-items: center;
 	justify-content: space-between;
 }
-.logo{
-	width: 120x;
-	cursor: pointer;
-}
 .navbar ul li{
 	list-style: none;
 	display: inline-block;
 	margin: 0 20px;
+	padding-right: 250px;
 }
