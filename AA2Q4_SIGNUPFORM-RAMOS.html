@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c57171;
+        }
+        .title{
+            background-color: #a8ebe7;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            padding-bottom: 10px;
+        }
+        .box {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #65d1c8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        fieldset {
+            border: 1px solid #22b19e;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding-top: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #10857f;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-box {
+            margin-bottom: 10px;
+            background-color: #10857f;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #0b5e57;
+            border-radius: 3px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .error {
+            border: 1px solid red !important;
+        }
+
+        .noterror {
+            border: 1px solid green !important;
+        }
+
+        #output {
+            border: 1px solid #02948d;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-color: #86e4d7;
+        }
+
+        button[type="submit"], button[type="reset"] {
+            background-color: #3bca1f; 
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button[type="reset"] {
+            background-color: #7a1919;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+      <div class="title">
+        <h1>Welcome to Edward's Website!</h1>
+        <p>Sign Up Now!.</p>
+      </div>
+        <form id="signup-form">
+            <fieldset>
+                <legend>Sign Up Information</legend>
+                <div class="input-box">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" onblur="checkInput(this)" onfocus="checkInput(this)">
+                </div>
+                <div class="input-box">
+                    <label for="username">Preferred Username:</label>
+                    <input type="text" id="username" name="username" onblur="checkInput(this)" onfocus="checkInput(this)">
+                </div>
+                <div class="input-box">
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender">
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="prefer_not_to_mention">Prefer Not to Mention</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" onblur="checkInput(this)" onfocus="checkInput(this)">
+                </div>
+                <div class="input-box">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" onblur="checkInput(this)" onfocus="checkInput(this)">
+                </div>
+                <div class="input-box">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" onblur="checkInput(this)" onfocus="checkInput(this)">
+                </div>
+                <div class="input-box">
+                    <label for="interest">Your Interests:</label>
+                    <textarea id="interest" name="interest" rows="4" onblur="checkInput(this)" onfocus="checkInput(this)"></textarea>
+                </div>
+            </fieldset>
+            <div id="output"></div>
+            <button type="submit" onclick="submitForm()">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+        function checkInput(input) {
+            if (input.value.trim() === '') {
+                input.classList.add('error');
+                input.classList.remove('noterror');
+            } else {
+                input.classList.remove('error');
+                input.classList.add('noterror');
+            }
+        }
+
+        function submitForm() {
+            event.preventDefault();
+            const form = document.getElementById('signup-form');
+            const formData = new FormData(form);
+            let output = "<h2>Sign Up Information</h2>";
+            formData.forEach((value, key) => {
+                output += `<p><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</p>`;
+            });
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+</html>
